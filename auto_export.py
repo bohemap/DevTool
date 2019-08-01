@@ -5,8 +5,8 @@ eclipse = finder.find_element(title_re="eclipse.* - Eclipse IDE", found_index=0)
 eclipse_app = app.Application(backend="uia").connect(process = eclipse.process_id)
 eclipse_window = eclipse_app.window()
 
-# eclipse_window.child_window(title="File", control_type="MenuItem").click_input()
-# eclipse_window.child_window(title="Export...", control_type="MenuItem", ctrl_index=0).click_input()
+eclipse_window.child_window(title="File", control_type="MenuItem").click_input()
+eclipse_window.child_window(title="Export...", control_type="MenuItem", ctrl_index=0).click_input()
 
 export = finder.find_element(title="Export")
 export_app = app.Application(backend="uia").connect(process = export.process_id)
